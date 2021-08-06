@@ -29,6 +29,7 @@ I used Google and Facebook oauth so that users will not create another account. 
 ### Styling
 
 I used SCSS to implement the styling of the application.
+nothing
 
 ## Built With
 
