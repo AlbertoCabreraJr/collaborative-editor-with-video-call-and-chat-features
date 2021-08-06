@@ -1,0 +1,40 @@
+$primary-color: #001528;
+$secondary-color: #02203c;
+$light-color: #f6f9fc;
+$blue-color: #00b0f0;
+$yellow-color: #fff7d6;
+$font-family-roboto-light: "Roboto Light";
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+.messages-container {
+  height: 380px !important;
+  overflow: auto;
+}
+
+.input-container {
+  height: 50px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  input {
+    outline: 0;
+    background: transparent;
+    border: 1px solid $light-color;
+    color: #f2f2f2;
+    font-family: $font-family-roboto-light;
+    font-size: 16px;
+    padding: 5px 11px;
+    position: relative;
+    border-radius: 25px;
+    width: 32em;
+    height: 30px;
+    margin-bottom: 20px;
+  }
+}

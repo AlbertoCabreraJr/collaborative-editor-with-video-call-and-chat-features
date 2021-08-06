@@ -1,0 +1,141 @@
+$primary-color: #001528;
+$secondary-color: #02203c;
+$light-color: #f6f9fc;
+$blue-color: #00b0f0;
+$yellow-color: #fff7d6;
+$font-family-roboto-light: Roboto Light;
+
+@mixin box-shadow($x, $y, $blur, $c) {
+  -webkit-box-shadow: $x $y $blur $c;
+  -moz-box-shadow: $x $y $blur $c;
+  -ms-box-shadow: $x $y $blur $c;
+  box-shadow: $x $y $blur $c;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+.room-container {
+  // overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to right top, $primary-color, $secondary-color);
+}
+
+.room-nav {
+  padding: 0.8em 0 0 1em;
+  display: flex;
+
+  .user-profile {
+    width: 30px;
+    height: 30px;
+    margin-top: 0.2em;
+    margin-left: 0.2em;
+
+    @include border-radius(100%);
+  }
+
+  .user-name {
+    color: $light-color;
+    font-family: $font-family-roboto-light;
+    position: relative;
+    top: 0.6em;
+    left: 0.5em;
+    font-size: 0.9em;
+  }
+
+  .logout-btn {
+    //   background-color: $light-color;
+    background-color: transparent;
+    font-family: $font-family-roboto-light;
+    font-weight: 100;
+    @include border-radius(5px);
+    border: 1px solid $light-color;
+    cursor: pointer;
+    width: 5%;
+    height: 26px;
+    position: relative;
+    left: 2.5em;
+    top: 0.3em;
+    color: $light-color;
+    font-size: 0.8em;
+
+    &:hover {
+      background-color: $light-color;
+      color: $primary-color;
+    }
+  }
+
+  .language-choices {
+    width: 8rem;
+    height: 2em;
+    background-color: $primary-color;
+    border: 0;
+    margin: 0 0 0 10em;
+    color: $light-color;
+    font-family: $font-family-roboto-light;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0.2rem;
+    text-align: center;
+    border-radius: 0.4rem;
+  }
+
+  .theme-choices {
+    width: 8rem;
+    height: 2em;
+    background-color: $primary-color;
+    border: 0;
+    margin: 0 0 0 1.8em;
+    color: $light-color;
+    font-family: $font-family-roboto-light;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0.2rem;
+    text-align: center;
+    border-radius: 0.4rem;
+  }
+}
+
+.room-contents {
+  // border: 1px solid white;
+  z-index: 1;
+  position: relative;
+  height: 95vh;
+  display: grid;
+  grid-template-columns: 70% 30%;
+
+  .room-editor-container {
+    flex-grow: 1;
+    flex-basis: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px 5px 15px;
+    overflow-y: hidden;
+  }
+
+  .room-call-message-container {
+    display: grid;
+    grid-template-rows: 443px 443px;
+    padding: 5px 15px 0px 5px;
+    row-gap: 15px;
+
+    .room-call {
+      @include border-radius(10px);
+      background: $primary-color;
+      padding: 1em;
+    }
+
+    .room-message {
+      background: $primary-color;
+      @include border-radius(10px);
+    }
+  }
+}
