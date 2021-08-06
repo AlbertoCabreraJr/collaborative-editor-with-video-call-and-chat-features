@@ -1,6 +1,6 @@
 # Code Collab
 
-A realtime collaborative code editor with built-in chat and video call.
+A realtime collaborative code editor with built-in chat and video call. Best for coding interviews, teaching, demos and more.
 
 ![1](https://user-images.githubusercontent.com/57309472/128317064-cf96c3be-a4e5-4517-9803-3a30f6b68b2a.PNG)
 ![2](https://user-images.githubusercontent.com/57309472/128317078-5945a26b-a810-46bb-aacb-0e68a1d8aa37.PNG)
